@@ -1,7 +1,5 @@
-import { ObjectId } from 'mongodb';
-
-export interface Accomdation {
-  _id: ObjectId;
+export interface Accomodation {
+  id: string;
   name: string;
   image: string;
   description: string;
@@ -12,10 +10,9 @@ export interface Accomdation {
   reviews: Review[];
 }
 
-
 export interface Review {
-  _id: ObjectId,
+  id: string,
   date: Date,
-  reviewerName: String,
-  comment: String
+  reviewerName: string,
+  comment: string
 }
