@@ -15,7 +15,6 @@ app.use(
 );
 
 app.use(logRequestMiddleware);
-
 app.use(logErrorRequestMiddleware);
 
 app.listen(ENV.PORT, async () => {

@@ -35,13 +35,13 @@ const paginateAccomodationList = (
 
 export const mockRepository: AccomdationRepository = {
     getAccomodationList: async (page?: number, pageSize?: number) => paginateAccomodationList(db.accomodations, page, pageSize),
-    getAccomodation: async (id: string) => db.accomodations.find((b) => b.id === id),
-    saveAccomodation: async (book: Accomodation) => db.accomodations.some((b) => b.id === book.id)
-        ? updateAccomodation(book)
-        : insertAccomodation(book),
+    getAccomodation: async (id: string) => db.accomodations.find((a) => a.id === id),
+    saveAccomodation: async (accomodation: Accomodation) => db.accomodations.some((a) => a.id === accomodation.id)
+        ? updateAccomodation(accomodation)
+        : insertAccomodation(accomodation),
     deleteAccomodation: async (id: string) => {
-        const exists = db.accomodations.some((b) => b.id === id);
-        db.accomodations = db.accomodations.filter((b) => b.id !== id);
+        const exists = db.accomodations.some((a) => a.id === id);
+        db.accomodations = db.accomodations.filter((a) => a.id !== id);
         return exists;
     },
 }
