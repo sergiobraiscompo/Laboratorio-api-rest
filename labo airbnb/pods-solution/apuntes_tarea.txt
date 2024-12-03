@@ -1,3 +1,0 @@
-video apartado 5 mongoose 1:11 <-- HH:MM
-
-refactor de mapReviewsFromModelToApi
