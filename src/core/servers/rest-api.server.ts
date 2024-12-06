@@ -1,6 +1,6 @@
-import express from "express";
-import cors from "cors";
-import { ENV } from "../constants/index.js";
+import express from 'express';
+import cors from 'cors';
+import { ENV } from '../constants/index.js';
 
 export const createRestApiServer = () => {
   const app = express();
