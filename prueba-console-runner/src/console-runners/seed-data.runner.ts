@@ -25,8 +25,8 @@ export const run = async () => {
     },
   ]);
 
-  const copySeedDataCommand = `sudo docker cp "${seedDataPath}" ${containerName}:${SEED_DATA_ROOT_PATH}/${SEED_DATA_FOLDER_NAME}`;
-  const restoreBackupCommand = `sudo docker exec ${containerName} mongorestore --nsFrom="${SEED_DATA_FOLDER_NAME}.*" --nsTo="${dbName}.*" ${SEED_DATA_ROOT_PATH}`;
+  const copySeedDataCommand = `docker cp "${seedDataPath}" ${containerName}:${SEED_DATA_ROOT_PATH}/${SEED_DATA_FOLDER_NAME}`;
+  const restoreBackupCommand = `docker exec ${containerName} mongorestore --nsFrom="${SEED_DATA_FOLDER_NAME}.*" --nsTo="${dbName}.*" ${SEED_DATA_ROOT_PATH}`;
 
   await runCommand(copySeedDataCommand);
   await runCommand(restoreBackupCommand);

@@ -14,7 +14,7 @@ export const run = async () => {
     if (accomodationCountry === "exit") {
         'queries'
     } else {
-        const result = await getAccomodationContext
+        const result = await getAccomodationContext()
             .aggregate(
                 [
                     { $match: { "address.country": accomodationCountry } },

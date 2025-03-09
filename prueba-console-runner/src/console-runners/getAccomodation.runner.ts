@@ -15,7 +15,7 @@ export const run = async () => {
     if (accomdationId === "exit") {
         'queries'
     } else {
-        const result = await getAccomodationContext
+        const result = await getAccomodationContext()
             .aggregate(
                 [
                     { $match: { _id: new ObjectId(accomdationId) } },
