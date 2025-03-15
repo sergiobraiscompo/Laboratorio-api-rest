@@ -1,20 +1,29 @@
-import express from 'express';
-import path from 'node:path'; 
+import express, { application } from 'express';
+import path from 'path';
+import url from 'url';
 import {
   logRequestMiddleware,
   logErrorRequestMiddleware,
 } from '#common/middlewares/index.js';
 import { createRestApiServer, dbServer } from '#core/servers/index.js';
 import { ENV } from '#core/constants/index.js';
+import { accomodationApi } from '#pods/accomodation/index.js';
 
 const app = createRestApiServer();
 
-app.use(
-  '/',
-  express.static(path.resolve(import.meta.dirname, ENV.STATIC_FILES_PATH))
-);
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const staticFilesPath = path.resolve(__dirname, ENV.STATIC_FILES_PATH);
+app.use('/', express.static(staticFilesPath));
+
+// app.use(
+//   '/',
+//   express.static(path.resolve(import.meta.dirname, ENV.STATIC_FILES_PATH))
+// );
 
 app.use(logRequestMiddleware);
+
+app.use('/api/airbnb-db', accomodationApi);
+
 app.use(logErrorRequestMiddleware);
 
 app.listen(ENV.PORT, async () => {
