@@ -14,12 +14,12 @@ export const db: DB = {
       bedrooms: 1,
       beds: 2,
       bathrooms: 1,
-      // reviews: [{
-      //   _id: new ObjectId(),
-      //   date: new Date (),
-      //   reviewerName: "",
-      //   comment: ""
-      // }],
+      reviews: [{
+        _id: new ObjectId(),
+        date: new Date (),
+        reviewerName: "",
+        comment: ""
+      }],
       image: "https://a0.muscache.com/im/pictures/aed1923a-69a6-4614-99d0-fd5c8f41ebda.jpg?aki_policy=large",
       address: "Barcelona"
     },
@@ -30,14 +30,14 @@ export const db: DB = {
       bedrooms: 1,
       beds: 2,
       bathrooms: 1,
-      // reviews: [
-      //   {
-      //     _id: new ObjectId(),
-      //     date: new Date("2016-02-14T05:00:00Z"),
-      //     reviewerName: "Miffy",
-      //     comment: "Rapha place is so tidy and the dog there is so friendly. I and my friend had a really good time there. Rapha is such a friendly host and he will always give us some suggestions of restaurants or place to travel. The location of the flat is easy to find and it is just next to the metro station and that is very convenient. The hot tourist spot Sagrada Familia is just next to the flat. We can go to the city centre just by walking. Even though at night, we still feel safe to walk to the apartment from the metro.I strongly recommend people to stay there during staying in Barcelona. "
-      //   }
-      // ],
+      reviews: [
+        {
+          _id: new ObjectId(),
+          date: new Date("2016-02-14T05:00:00Z"),
+          reviewerName: "Miffy",
+          comment: "Rapha place is so tidy and the dog there is so friendly. I and my friend had a really good time there. Rapha is such a friendly host and he will always give us some suggestions of restaurants or place to travel. The location of the flat is easy to find and it is just next to the metro station and that is very convenient. The hot tourist spot Sagrada Familia is just next to the flat. We can go to the city centre just by walking. Even though at night, we still feel safe to walk to the apartment from the metro.I strongly recommend people to stay there during staying in Barcelona. "
+        }
+      ],
       image: "https://a0.muscache.com/im/pictures/953b3c09-adb5-4d1c-a403-b3e61c8fa766.jpg?aki_policy=large",
       address: "Barcelona"
     },

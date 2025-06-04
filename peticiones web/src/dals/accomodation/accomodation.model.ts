@@ -9,10 +9,10 @@ export interface Accomodation {
   bedrooms: number;
   beds: number;
   bathrooms: number;
-  // reviews: [{
-  //   _id: ObjectId,
-  //   date: Date,
-  //   reviewerName: string,
-  //   comment: string
-  // }];
+  reviews: [{
+    _id: ObjectId,
+    date: Date,
+    reviewerName: string,
+    comment: string
+  }];
 }

@@ -12,7 +12,7 @@ export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation):
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  // reviews: accomodation.reviews
+  reviews: accomodation.reviews
 });
 
 export const mapAccomodationListFromModelToApi = (
@@ -28,10 +28,5 @@ export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodatio
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  // reviews: [{
-  //   _id: ,
-  //   date: Date,
-  //   reviewerName: String,
-  //   comment: String
-  // }];
+  reviews: []
 });
