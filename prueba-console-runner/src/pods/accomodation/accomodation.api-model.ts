@@ -14,5 +14,5 @@ export interface Accomodation {
   bedrooms: number;
   beds: number;
   bathrooms: number;
-  review: review[] 
+  reviews: review[]
 }
