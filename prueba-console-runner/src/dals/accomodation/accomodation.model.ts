@@ -1,11 +1,11 @@
 import { ObjectId } from "mongodb";
 
-interface review {
-    _id: ObjectId,
-    date: Date,
-    reviewerName: string,
-    comment: string
-} 
+// interface Review {
+//    _id: ObjectId,
+//    date: Date,
+//    reviewerName: string,
+//    comment: string
+// } 
 
 export interface Accomodation {
    _id: ObjectId;
@@ -16,5 +16,5 @@ export interface Accomodation {
    bedrooms: number;
    beds: number;
    bathrooms: number;
-   reviews: review[] 
+   // reviews: Review[] 
 }

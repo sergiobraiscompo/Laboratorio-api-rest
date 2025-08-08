@@ -1,9 +1,9 @@
-interface review {
-     _id: string,
-     date: Date,
-     reviewerName: string,
-     comment: string
-}
+// interface review {
+//   _id: string,
+//   date: Date,
+//   reviewerName: string,
+//   comment: string
+// }
 
 export interface Accomodation {
   id: string;
@@ -14,5 +14,5 @@ export interface Accomodation {
   bedrooms: number;
   beds: number;
   bathrooms: number;
-  review: review[] 
+  // review: review[] 
 }

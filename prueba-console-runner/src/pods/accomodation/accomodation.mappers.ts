@@ -1,7 +1,7 @@
 import * as model from "#dals/index.js";
 import { ObjectId } from "mongodb";
 import * as apiModel from "./accomodation.api-model.js";
-import { accomodationApi } from "./accomodation.rest-api.js";
+// import { accomodationApi } from "./accomodation.rest-api.js";
 
 export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation): apiModel.Accomodation => ({
   id: accomodation._id.toHexString(),

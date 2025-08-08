@@ -1,5 +1,5 @@
 {
-  "name": "bootcamp-backend-lemoncode",
+  "name": "airbnb-api",
   "type": "module",
   "scripts": {
     "start": "run-p -l type-check:watch start:dev start:local-db",
