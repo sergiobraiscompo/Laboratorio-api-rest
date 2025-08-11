@@ -12,7 +12,7 @@ export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation):
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  reviews: accomodation.reviews
+  // reviews: accomodation.reviews
 });
 
 export const mapAccomodationListFromModelToApi = (
@@ -28,16 +28,16 @@ export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodatio
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  reviews: () => {mapReviews(accomodation.reviews)};
+  // reviews: () => {mapReviews(accomodation.reviews)};
 });
 
-const mapReviews = (reviews: review[]): review[] => {
-  const reviewsSorted = reviews.sort((a, b) => (a.date < b.date ? -1 : 1));
-  const fiveLastReviews = reviewsSorted.slice(0, 4);
-  const listReviews: review[] = fiveLastReviews.map(review => review.,
-     date: Date,
-     reviewerName: string,
-     comment: string[])
+// const mapReviews = (reviews: review[]): review[] => {
+//   const reviewsSorted = reviews.sort((a, b) => (a.date < b.date ? -1 : 1));
+//   const fiveLastReviews = reviewsSorted.slice(0, 4);
+//   const listReviews: review[] = fiveLastReviews.map(review => review.,
+//      date: Date,
+//      reviewerName: string,
+//      comment: string[])
 
-  return listReviews;
-}
+//   return listReviews;
+// }

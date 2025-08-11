@@ -2,6 +2,7 @@ import prompts from 'prompts';
 import { ENV } from '#core/constants/index.js';
 import { dbServer } from '#core/servers/index.js';
 
+// Asking for database link
 const { connectionURL } = await prompts({
   name: 'connectionURL',
   initial: ENV.MONGODB_URL,
@@ -11,6 +12,7 @@ const { connectionURL } = await prompts({
 console.log('Connecting to database...');
 await dbServer.connect(connectionURL);
 
+// Show prompts
 let exit = false;
 while (!exit) {
   const { consoleRunner } = await prompts({
