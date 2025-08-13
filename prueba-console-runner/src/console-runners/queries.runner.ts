@@ -6,8 +6,18 @@ const get5Accomodations = async () => {
     const result = await getAccomodationContext()
         .find()
         .limit(5)
-        .toArray();
-    console.log({ result });
+        .project({
+            _id: 1,
+            name: 1,
+            description: 1,
+            address: "$address.street"
+        }
+        )
+        // .addFields: ({
+        //     "Reviews": [$concat: [ "$reviews.date" ]] 
+        // })
+      .toArray();
+console.log({ result });
 }
 
 // Alojamiento por ID
@@ -77,5 +87,4 @@ while (!exit) {
     } else {
         exit = true;
     }
-
 }
