@@ -16,7 +16,7 @@ export const db: DB = {
       bathrooms: 1,
       reviews: [{
         _id: new ObjectId(),
-        date: new Date (),
+        date: new Date(),
         reviewerName: "",
         comment: ""
       }],

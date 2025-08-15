@@ -13,7 +13,7 @@ accomodationApi
     try {
       const page = Number(req.query.page);
       const pageSize = Number(req.query.pageSize);
-      const accomodationList = await accomodationRepository.getAccomodationList(page, pageSize);
+      const accomodationList = await accomodationRepository.paginateAccomodationList(page, pageSize);
       res.send(mapAccomodationListFromModelToApi(accomodationList));
     } catch (error) {
       next(error);
@@ -32,25 +32,14 @@ accomodationApi
       next(error);
     }
   })
-  .post("/", async (req, res, next) => {
-    try {
-      const accomodation = mapAccomodationFromApiToModel(req.body);
-      const newAccomodation = await accomodationRepository.saveAccomodation(accomodation);
-      res.status(201).send(mapAccomodationFromModelToApi(newAccomodation));
-    } catch (error) {
-      next(error);
-    }
-  })
   .put("/:id", async (req, res, next) => {
     try {
       const { id } = req.params;
-      if (await accomodationRepository.getAccomodation(id)) {
-        const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
-        await accomodationRepository.saveAccomodation(accomodation);
-        res.sendStatus(204);
-      } else {
-        res.sendStatus(404);
-      }
+      const accomodationId = Number(id);
+      const accomodation = req.body;
+      await accomodationRepository.addReview(accomodation)
+      await 
+      res.sendStatus(204);
     } catch (error) {
       next(error);
     }
