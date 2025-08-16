@@ -36,9 +36,8 @@ accomodationApi
     try {
       const { id } = req.params;
       const accomodationId = Number(id);
-      const accomodation = req.body;
-      await accomodationRepository.addReview(accomodation)
-      await 
+      const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
+      await accomodationRepository.saveAccomodation(accomodation);
       res.sendStatus(204);
     } catch (error) {
       next(error);

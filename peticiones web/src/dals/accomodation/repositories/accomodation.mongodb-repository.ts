@@ -1,5 +1,6 @@
 import { AccomodationRepository } from "./accomodation.repository.js";
 import { getAccomodationContext } from "../accomodation.context.js";
+import { Accomodation } from "../accomodation.model.js";
 
 export const mongoDBRepository: AccomodationRepository = {
   paginateAccomodationList: async (page?: number, pageSize?: number) => {
@@ -11,17 +12,10 @@ export const mongoDBRepository: AccomodationRepository = {
     return await getAccomodationContext().findOne({
       _id: id,
     })
-
   },
-  addReview: async (review: object) => {
-    return await getAccomodationContext().findOneAndUpdate(
-      { _id: review.i },
-      { $set: review },
-      {
-        upsert: true,
-        returnDocument: 'after',
-      }
-    );
+  updateAccomodation()
+  saveAccomodation: async (accomodation: Accomodation) => {
+    Boolean(accomodation._id) ? updateAccomodation(accomodation) : insertAccomodation(accomodation),
   },
   deleteAccomodation: async (id: string) => {
     const { deletedCount } = await getAccomodationContext().deleteOne({

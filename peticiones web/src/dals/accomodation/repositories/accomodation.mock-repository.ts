@@ -38,7 +38,7 @@ export const mockRepository: AccomodationRepository = {
   paginateAccomodationList: async (page?: number, pageSize?: number) =>
     paginateAccomodationList(db.accomodations, page, pageSize),
   getAccomodation: async (id: string) => db.accomodations.find((a) => a._id === id),
-  saveAccomodation: async (accomodation: Accomodation) =>
+  updateAccomodation: async (accomodation: Accomodation) =>
     db.accomodations.some((a) => a._id === accomodation._id)
       ? updateAccomodation(accomodation)
       : insertAccomodation(accomodation),
