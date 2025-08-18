@@ -1,3 +1,4 @@
+import { dbServer } from "#core/servers/db.server.js";
 import prompts from "prompts";
 
 let exit = false;
@@ -7,7 +8,7 @@ while (!exit) {
     name: "consoleRunner",
     type: "select",
     message: "Which console-runner do you want to run?",
-    choices: ["create-admin", "exit"].map((option) => ({
+    choices: ['seed-data', "create-admin", "exit"].map((option) => ({
       title: option,
       value: option,
     })),
@@ -18,5 +19,6 @@ while (!exit) {
     await run();
   } else {
     exit = true;
+    await dbServer.disconnect();
   }
 }

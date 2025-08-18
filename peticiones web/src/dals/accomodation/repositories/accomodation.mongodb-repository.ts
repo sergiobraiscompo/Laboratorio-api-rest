@@ -1,6 +1,8 @@
 import { AccomodationRepository } from "./accomodation.repository.js";
 import { getAccomodationContext } from "../accomodation.context.js";
-import { Accomodation } from "../accomodation.model.js";
+import { Accomodation, Review } from "../accomodation.model.js";
+import { response } from "express";
+import { ObjectId } from "mongodb";
 
 export const mongoDBRepository: AccomodationRepository = {
   paginateAccomodationList: async (page?: number, pageSize?: number) => {
@@ -9,15 +11,23 @@ export const mongoDBRepository: AccomodationRepository = {
     return await getAccomodationContext().find().skip(skip).limit(limit).toArray();
   },
   getAccomodation: async (id: string) => {
-    return await getAccomodationContext().findOne({
-      _id: id,
-    })
+    try {
+      return await getAccomodationContext().findOne({
+        _id: id,
+      })
+    } catch {
+    }
   },
-  updateAccomodation()
-  saveAccomodation: async (accomodation: Accomodation) => {
-    Boolean(accomodation._id) ? updateAccomodation(accomodation) : insertAccomodation(accomodation),
+  insertAccomodation: async (accomodation: Accomodation): Promise<Accomodation> => {
+    await getAccomodationContext().insertOne(accomodation)
+    return accomodation;
   },
-  deleteAccomodation: async (id: string) => {
+  updateAccomodation: async (id: ObjectId, newReview: Review): Promise<Accomodation> => {
+    const accomodation = await getAccomodationContext().findOne(id);
+    accomodation.reviews.push(newReview);
+    return accomodation;
+  },
+  deleteAccomodation: async (id: string): Promise<Boolean> => {
     const { deletedCount } = await getAccomodationContext().deleteOne({
       _id: id,
     });

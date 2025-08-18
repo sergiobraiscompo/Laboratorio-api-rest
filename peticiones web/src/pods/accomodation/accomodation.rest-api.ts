@@ -5,6 +5,7 @@ import {
   mapAccomodationFromModelToApi,
   mapAccomodationFromApiToModel,
 } from "./accomodation.mappers.js";
+import { ObjectId } from "mongodb";
 
 export const accomodationApi = Router();
 
@@ -35,9 +36,9 @@ accomodationApi
   .put("/:id", async (req, res, next) => {
     try {
       const { id } = req.params;
-      const accomodationId = Number(id);
       const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
-      await accomodationRepository.saveAccomodation(accomodation);
+      const reviews = accomodation.reviews;
+      await accomodationRepository.updateAccomodation(new ObjectId(id), );
       res.sendStatus(204);
     } catch (error) {
       next(error);
