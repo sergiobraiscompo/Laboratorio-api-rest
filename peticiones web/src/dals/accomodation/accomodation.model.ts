@@ -1,11 +1,13 @@
+import { ObjectId } from "mongodb";
+
 export interface Review {
-  _id: string;
-  reviewerName: string
-  comments: string
+  _id: ObjectId;
+  reviewerName: string;
+  comment: string;
 }
 
 export interface Accomodation {
-  _id: string;
+  _id: ObjectId;
   name: string;
   images: string;
   description: string;

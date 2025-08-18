@@ -1,10 +1,12 @@
 import { AccomodationRepository } from "./accomodation.repository.js";
-import { Accomodation } from "../accomodation.model.js";
+import { Accomodation, Review } from "../accomodation.model.js";
 import { db } from "../../mock-data.js";
 import { ObjectId } from "mongodb";
+import { getAccomodationContext } from "../accomodation.context.js";
+import { mapAccomodationFromApiToModel } from "#pods/accomodation/accomodation.mappers.js";
 
 const insertAccomodation = (accomodation: Accomodation) => {
-  const _id = new ObjectId();
+  const _id = (db.accomodations.length + 1).toString();
   const newAccomodation: Accomodation = {
     ...accomodation,
     _id,
@@ -27,7 +29,7 @@ const paginateAccomodationList = (
   let paginatedAccomodationList = [...accomodationList];
   if (page && pageSize) {
     const startIndex = (page - 1) * pageSize;
-    const endIndex = Math.min(startIndex + pageSize, paginatedAccomodationList.length);
+    const endIndex = Math.min(startIndex + pageSize, paginateAccomodationList.length);
     paginatedAccomodationList = paginatedAccomodationList.slice(startIndex, endIndex);
   }
 
@@ -35,15 +37,15 @@ const paginateAccomodationList = (
 };
 
 export const mockRepository: AccomodationRepository = {
-  paginateAccomodationList: async (page?: number, pageSize?: number) =>
+  getAccomodationList: async (page?: number, pageSize?: number) =>
     paginateAccomodationList(db.accomodations, page, pageSize),
   getAccomodation: async (id: string) => db.accomodations.find((a) => a._id === id),
-  updateAccomodation: async (accomodation: Accomodation) =>
+  saveAccomodation: async (accomodation: Accomodation) =>
     db.accomodations.some((a) => a._id === accomodation._id)
       ? updateAccomodation(accomodation)
       : insertAccomodation(accomodation),
   deleteAccomodation: async (id: string) => {
-    const exists = db.accomodations.some((a) => a._id === id);
+    const exists = await db.accomodations.some((a) => a._id === id);
     db.accomodations = db.accomodations.filter((a) => a._id !== id);
     return exists;
   },

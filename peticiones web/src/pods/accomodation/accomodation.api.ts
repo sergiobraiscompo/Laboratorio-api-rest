@@ -3,10 +3,8 @@ import { accomodationRepository } from "#dals/index.js";
 import {
   mapAccomodationListFromModelToApi,
   mapAccomodationFromModelToApi,
-  mapAccomodationFromApiToModel,
+  mapReviewFromApiToModel,
 } from "./accomodation.mappers.js";
-import { ObjectId } from "mongodb";
-
 export const accomodationApi = Router();
 
 accomodationApi
@@ -14,7 +12,7 @@ accomodationApi
     try {
       const page = Number(req.query.page);
       const pageSize = Number(req.query.pageSize);
-      const accomodationList = await accomodationRepository.paginateAccomodationList(page, pageSize);
+      const accomodationList = await accomodationRepository.getAccomodationList(page, pageSize);
       res.send(mapAccomodationListFromModelToApi(accomodationList));
     } catch (error) {
       next(error);
@@ -36,10 +34,13 @@ accomodationApi
   .put("/:id", async (req, res, next) => {
     try {
       const { id } = req.params;
-      const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
-      const reviews = accomodation.reviews;
-      await accomodationRepository.updateAccomodation(new ObjectId(id), );
-      res.sendStatus(204);
+      if (await accomodationRepository.getAccomodation(id)) {
+        const newReview = mapReviewFromApiToModel({...req.body, id});
+        await accomodationRepository.addReview(id, newReview);
+        res.sendStatus(204);
+      } else {
+        res.sendStatus(404);
+      }
     } catch (error) {
       next(error);
     }

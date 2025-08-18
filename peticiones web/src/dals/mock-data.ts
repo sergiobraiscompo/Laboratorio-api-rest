@@ -20,7 +20,7 @@ export const db: DB = {
         reviewerName: "",
         comment: ""
       }],
-      image: "https://a0.muscache.com/im/pictures/aed1923a-69a6-4614-99d0-fd5c8f41ebda.jpg?aki_policy=large",
+      images: "https://a0.muscache.com/im/pictures/aed1923a-69a6-4614-99d0-fd5c8f41ebda.jpg?aki_policy=large",
       address: "Barcelona"
     },
     {
