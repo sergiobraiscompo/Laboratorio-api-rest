@@ -4,6 +4,7 @@ import {
   mapAccomodationListFromModelToApi,
   mapAccomodationFromModelToApi,
   mapReviewFromApiToModel,
+  mapAccomodationFromApiToModel,
 } from "./accomodation.mappers.js";
 export const accomodationApi = Router();
 
@@ -34,9 +35,11 @@ accomodationApi
   .put("/:id", async (req, res, next) => {
     try {
       const { id } = req.params;
+
       if (await accomodationRepository.getAccomodation(id)) {
-        const newReview = mapReviewFromApiToModel({...req.body, id});
+        const newReview = mapReviewFromApiToModel({ ...req.body, id });
         await accomodationRepository.addReview(id, newReview);
+        const accomodation = await mapAccomodationFromApiToModel({...req.body, id});
         res.sendStatus(204);
       } else {
         res.sendStatus(404);

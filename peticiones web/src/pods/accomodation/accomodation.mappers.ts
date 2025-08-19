@@ -32,7 +32,6 @@ export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodatio
   reviews: accomodation.reviews
 });
 
-
 // Review Mappers
 export const mapReviewFromModelToApi = (review: model.Review): apiModel.Review => ({
   id: review._id.toHexString(),

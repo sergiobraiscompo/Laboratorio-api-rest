@@ -1,7 +1,6 @@
 import { AccomodationRepository } from "./accomodation.repository.js";
 import { getAccomodationContext } from "../accomodation.context.js";
 import { Accomodation, Review } from "../accomodation.model.js";
-import { response } from "express";
 import { ObjectId } from "mongodb";
 
 export const mongoDBRepository: AccomodationRepository = {
@@ -20,18 +19,20 @@ export const mongoDBRepository: AccomodationRepository = {
       {
         _id: accomodation._id,
       },
-      { $set: accomodation },
+      { $set: accomodation.reviews },
       { upsert: true, returnDocument: 'after' }
     );
   },
   addReview: async (id: string, newReview: Review) => {
-    const accomodation = await getAccomodationContext().findOne({
-      _id: new ObjectId(id),
-    }
-    );
-
-    const addReview = accomodation.reviews.push(newReview);
-    return accomodation;
+    return await accomodation
+      .findOneAndUpdate(
+        {
+          _id: book._id,
+        },
+        { $set: book },
+        { upsert: true, returnDocument: 'after' }
+      )
+      .lean();
   },
   deleteAccomodation: async (id: string): Promise<Boolean> => {
     const { deletedCount } = await getAccomodationContext().deleteOne({
