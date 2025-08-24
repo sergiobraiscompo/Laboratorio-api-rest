@@ -2,8 +2,10 @@ import { ObjectId } from "mongodb";
 
 export interface Review {
   _id: ObjectId;
-  reviewerName: string;
-  comment: string;
+  listing_id: Number;
+  reviewer_id: Number;
+  reviewer_name: string;
+  comments: string;
 }
 
 export interface Accomodation {

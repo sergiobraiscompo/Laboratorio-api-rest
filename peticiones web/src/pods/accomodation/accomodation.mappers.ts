@@ -34,13 +34,17 @@ export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodatio
 
 // Review Mappers
 export const mapReviewFromModelToApi = (review: model.Review): apiModel.Review => ({
-  id: review._id.toHexString(),
-  reviewerName: review.reviewerName,
-  comment: review.comment
+  _id: review._id.toHexString(),
+  listing_id: String(review.listing_id),
+  reviewer_id: String(review.reviewer_id),
+  reviewer_name: review.reviewer_name,
+  comments: review.comments,
 })
 
 export const mapReviewFromApiToModel = (review: apiModel.Review): model.Review => ({
-  _id: new ObjectId(review.id),
-  reviewerName: review.reviewerName,
-  comment: review.comment
+  _id: new ObjectId(review._id),
+  listing_id: Number(review.listing_id),
+  reviewer_id: Number(review.reviewer_id),
+  reviewer_name: review.reviewer_name,
+  comments: review.comments,
 })

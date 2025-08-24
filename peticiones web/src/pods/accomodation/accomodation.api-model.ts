@@ -1,7 +1,9 @@
 export interface Review {
-  id: string;
-  reviewerName: string;
-  comment: string;
+  _id: string;
+  listing_id: string;
+  reviewer_id: string;
+  reviewer_name: string;
+  comments: string;
 }
 
 

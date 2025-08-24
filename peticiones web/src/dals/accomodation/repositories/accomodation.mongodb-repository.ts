@@ -19,20 +19,19 @@ export const mongoDBRepository: AccomodationRepository = {
       {
         _id: accomodation._id,
       },
-      { $set: accomodation.reviews },
+      { $set: accomodation },
       { upsert: true, returnDocument: 'after' }
     );
   },
-  addReview: async (id: string, newReview: Review) => {
-    return await accomodation
+  addReview: async (accomodation: Accomodation, newReview: Review) => {
+    return await getAccomodationContext()
       .findOneAndUpdate(
         {
-          _id: book._id,
+          _id: accomodation._id,
         },
-        { $set: book },
+        { $push: { reviews: newReview } },
         { upsert: true, returnDocument: 'after' }
       )
-      .lean();
   },
   deleteAccomodation: async (id: string): Promise<Boolean> => {
     const { deletedCount } = await getAccomodationContext().deleteOne({
