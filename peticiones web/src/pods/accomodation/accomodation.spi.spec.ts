@@ -4,6 +4,8 @@ import { createRestApiServer, dbServer } from '#core/servers/index.js';
 import { ENV } from '#core/constants/index.js';
 import { getAccomodationContext } from '#dals/accomodation/accomodation.context.js';
 import { accomodationApi } from './accomodation.api.js';
+import { application } from 'express';
+import { Accomodation } from './accomodation.api-model.js';
 
 describe('pods/accomodation/accomodation.api specs', () => {
     beforeAll(async () => {
@@ -33,7 +35,7 @@ describe('pods/accomodation/accomodation.api specs', () => {
             const route = '/';
 
             // Act
-            const response = await supertest(app).get(route);
+            const response = await supertest(application).get(route);
 
             // Assert
             expect(response.statusCode).toEqual(200);
@@ -42,8 +44,8 @@ describe('pods/accomodation/accomodation.api specs', () => {
     });
 });
 
-describe('insert book', () => {
-    it('should return 201 when an admin user inserts new book', async () => {
+describe('insert accomodation', () => {
+    it('should return 201 when an admin user inserts new accomodation', async () => {
         // Arrange
         const app = createRestApiServer();
         app.use((req, res, next) => {
@@ -53,10 +55,10 @@ describe('insert book', () => {
             };
             next();
         });
-        app.use(bookApi);
+        app.use(accomodationApi);
 
         const route = '/';
-        const newBook: Book = {
+        const newAccomodation: Accomodation = {
             id: undefined,
             title: 'book-2',
             author: 'author-2',
@@ -64,14 +66,14 @@ describe('insert book', () => {
         };
 
         // Act
-        const response = await supertest(app).post(route).send(newBook);
+        const response = await supertest(app).post(route).send(newAccomodation);
 
         // Assert
         expect(response.statusCode).toEqual(201);
         expect(response.body.id).toEqual(expect.any(String));
-        expect(response.body.title).toEqual(newBook.title);
-        expect(response.body.author).toEqual(newBook.author);
-        expect(response.body.releaseDate).toEqual(newBook.releaseDate);
+        expect(response.body.title).toEqual(newAccomodation.title);
+        expect(response.body.author).toEqual(newAccomodation.author);
+        expect(response.body.releaseDate).toEqual(newAccomodation.releaseDate);
     });
 });
 
@@ -85,10 +87,10 @@ it('should return 403 when a standard user try to insert new book', async () => 
         };
         next();
     });
-    app.use(bookApi);
+    app.use(accomodationApi);
 
     const route = '/';
-    const newBook: Book = {
+    const newAccomodation: Accomodation = {
         id: undefined,
         title: 'book-2',
         author: 'author-2',
@@ -96,7 +98,7 @@ it('should return 403 when a standard user try to insert new book', async () => 
     };
 
     // Act
-    const response = await supertest(app).post(route).send(newBook);
+    const response = await supertest(app).post(route).send(newAccomodation);
 
     // Assert
     expect(response.statusCode).toEqual(403);

@@ -36,11 +36,15 @@ accomodationApi
   .put("/:id", async (req, res, next) => {
     try {
       const { id } = req.params;
-      const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
-      const newReview: Review = {_id: new ObjectId(), ...req.body[1]};
-      console.log(newReview);
-      await accomodationRepository.addReview(accomodation, newReview);
-      res.sendStatus(204).send(accomodation);
+      if (await accomodationRepository.getAccomodation(id)) {
+        const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
+        const newReview: Review = { _id: new ObjectId(), ...req.body[1] };
+        console.log(newReview);
+        await accomodationRepository.addReview(accomodation, newReview);
+        res.sendStatus(204).send(accomodation);
+      } else {
+        res.sendStatus(404);
+      }
     } catch (error) {
       next(error);
     }
