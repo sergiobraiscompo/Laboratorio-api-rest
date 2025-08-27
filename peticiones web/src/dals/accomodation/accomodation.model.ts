@@ -1,8 +1,8 @@
 import { ObjectId } from "mongodb";
 
 export type Review = {
-  _id: ObjectId;
-  reviewDate: Date;
+  _id: Number;
+  date: Date;
   listing_id: Number;
   reviewer_id: Number;
   reviewer_name: string;

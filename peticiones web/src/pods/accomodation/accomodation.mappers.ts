@@ -17,7 +17,7 @@ export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation):
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  reviews: mapReviewFromModelToApi(accomodation.reviews).
+  reviews: accomodation.reviews.map(mapReviewFromModelToApi)
 });
 
 export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodation): model.Accomodation => ({
@@ -29,7 +29,7 @@ export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodatio
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  reviews: mapReviewsFromModelToApi(accomodation.reviews)
+  reviews: mapReviewsFromApiToModel(accomodation.reviews)
 });
 
 // Review Mappers
@@ -37,18 +37,22 @@ export const mapReviewsFromModelToApi = (
   reviews: model.Review[]
 ): apiModel.Review[] => reviews.map(mapReviewFromModelToApi);
 
+export const mapReviewsFromApiToModel = (
+  reviews: apiModel.Review[]
+): model.Review[] => reviews.map(mapReviewFromApiToModel);
+
 export const mapReviewFromModelToApi = (review: model.Review): apiModel.Review => ({
-  _id: review._id.toHexString(),
-  reviewDate: review.reviewDate.toLocaleString(),
+  _id: review._id.toString(),
+  date: review.date,
   listing_id: String(review.listing_id),
   reviewer_id: String(review.reviewer_id),
   reviewer_name: review.reviewer_name,
-  comments: review.comments,
+  comments: review.comments
 })
 
 export const mapReviewFromApiToModel = (review: apiModel.Review): model.Review => ({
-  _id: new ObjectId(review._id),
-  reviewDate: new Date(review.reviewDate),
+  _id: Number(review._id),
+  date: new Date(review.date),
   listing_id: Number(review.listing_id),
   reviewer_id: Number(review.reviewer_id),
   reviewer_name: review.reviewer_name,

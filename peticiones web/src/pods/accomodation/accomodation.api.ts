@@ -24,6 +24,10 @@ accomodationApi
       const { id } = req.params;
       const accomodation = await accomodationRepository.getAccomodation(id);
       if (accomodation) {
+        const reviews: Review[] = accomodation.reviews.slice(0, 5);
+        const last5reviews = reviews.sort((reviewA, reviewB) => reviewA[1] - reviewB[1]);
+        console.log('Sorted dates:', last5reviews)
+
         res.send(mapAccomodationFromModelToApi(accomodation));
       } else {
         res.sendStatus(404);
