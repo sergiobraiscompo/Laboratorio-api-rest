@@ -1,5 +1,6 @@
-export interface Review {
+export type Review = {
   _id: string;
+  reviewDate: string
   listing_id: string;
   reviewer_id: string;
   reviewer_name: string;

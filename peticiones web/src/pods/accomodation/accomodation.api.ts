@@ -3,7 +3,6 @@ import { accomodationRepository, Review } from "#dals/index.js";
 import {
   mapAccomodationListFromModelToApi,
   mapAccomodationFromModelToApi,
-  mapReviewFromApiToModel,
   mapAccomodationFromApiToModel,
 } from "./accomodation.mappers.js";
 import { ObjectId } from "mongodb";

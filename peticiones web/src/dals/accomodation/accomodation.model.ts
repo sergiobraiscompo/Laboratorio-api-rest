@@ -1,7 +1,8 @@
 import { ObjectId } from "mongodb";
 
-export interface Review {
+export type Review = {
   _id: ObjectId;
+  reviewDate: Date;
   listing_id: Number;
   reviewer_id: Number;
   reviewer_name: string;
@@ -17,5 +18,5 @@ export interface Accomodation {
   bedrooms: number;
   beds: number;
   bathrooms: number;
-  reviews: [{}];
+  reviews: Review[];
 }

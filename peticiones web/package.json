@@ -22,7 +22,6 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.7.0",
-    "mongoose": "^8.4.4",
     "vi": "^1.0.0"
   },
   "devDependencies": {

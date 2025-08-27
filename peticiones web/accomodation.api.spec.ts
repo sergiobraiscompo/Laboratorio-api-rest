@@ -15,9 +15,19 @@ describe('pods/accomodation/accomodation.api specs', () => {
     beforeEach(async () => {
         await getAccomodationContext().insertOne({
             _id: new ObjectId(),
-            title: 'accomodation-1',
-            author: 'author-1',
-            releaseDate: new Date('2021-07-28'),
+            name: "Nice room in Barcelona Center",
+            description: "Hi!  Cozy double bed room in amazing flat next to Passeig de Sant Joan and to metro stop Verdaguer. 3 streets to Sagrada Familia and 4 streets to Passeig de Gracia. Flat located in the center of the city.  View to Sagrada Familia and Torre Agbar. Nice flat in the central neighboorhood of Eixample. Ideal couple or 2 friends. Dreta de l'Eixample",
+            bedrooms: 1,
+            beds: 2,
+            bathrooms: 1,
+            reviews: [{
+                _id: new ObjectId(),
+                date: new Date(),
+                reviewerName: "",
+                comment: ""
+            }],
+            images: "https://a0.muscache.com/im/pictures/aed1923a-69a6-4614-99d0-fd5c8f41ebda.jpg?aki_policy=large",
+            address: "Barcelona"
         });
     });
 
@@ -71,7 +81,7 @@ describe('insert accomodation', () => {
         // Assert
         expect(response.statusCode).toEqual(201);
         expect(response.body.id).toEqual(expect.any(String));
-        expect(response.body.title).toEqual(newAccomodation.title);
+        expect(response.body.title).toEqual(newAccomodation);
         expect(response.body.author).toEqual(newAccomodation.author);
         expect(response.body.releaseDate).toEqual(newAccomodation.releaseDate);
     });
