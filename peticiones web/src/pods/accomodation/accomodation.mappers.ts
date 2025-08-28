@@ -17,7 +17,7 @@ export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation):
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  reviews: accomodation.reviews.map(mapReviewFromModelToApi)
+  reviews: mapReviewsFromModelToApi(accomodation.reviews)
 });
 
 export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodation): model.Accomodation => ({
@@ -32,11 +32,16 @@ export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodatio
   reviews: mapReviewsFromApiToModel(accomodation.reviews)
 });
 
-// Review Mappers
-export const mapReviewsFromModelToApi = (
-  reviews: model.Review[]
-): apiModel.Review[] => reviews.map(mapReviewFromModelToApi);
+// Handles getTime() possible errors
+const getTime = (date?: Date) => {
+  return date != null ? date.getTime() : 0;
+}
 
+// Review Mappers
+export const mapReviewsFromModelToApi = (reviews: model.Review[]): apiModel.Review[] => {
+  const last5Reviews = reviews.sort((reviewA, reviewB) => getTime(reviewA.date) - getTime(reviewB.date)).slice(0, 5);
+  return last5Reviews.map(mapReviewFromModelToApi);
+}
 export const mapReviewsFromApiToModel = (
   reviews: apiModel.Review[]
 ): model.Review[] => reviews.map(mapReviewFromApiToModel);
