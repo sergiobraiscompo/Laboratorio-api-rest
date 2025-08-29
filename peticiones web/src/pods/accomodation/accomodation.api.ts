@@ -36,9 +36,11 @@ accomodationApi
     try {
       const { id } = req.params;
       if (await accomodationRepository.getAccomodation(id)) {
+        const reviews = (await accomodationRepository.getAccomodation(id)).reviews;
+        console.log(reviews);
         const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
-        const newReview: Review = { _id: new ObjectId(), ...req.body[1] };
-        console.log(newReview);
+        const lastId = accomodation.reviews.sort((reviewA, reviewB) => Number(reviewA._id) - Number(reviewB._id)).slice(0)[0]._id;
+        const newReview: Review = { _id: lastId + 1, date: new Date(), ...req.body[1] };
         await accomodationRepository.addReview(accomodation, newReview);
         res.sendStatus(204).send(accomodation);
       } else {

@@ -5,7 +5,6 @@
     "prestart": "node ./create-dev-env.js && docker compose down --remove-orphans",
     "start": "run-p -l type-check:watch start:dev start:local-db",
     "start:dev": "tsx --require dotenv/config --watch src/index.ts",
-    "prestart:console-runners": "npm run prestart",
     "start:console-runners": "run-p type-check:watch console-runners start:local-db",
     "console-runners": "tsx --require dotenv/config --watch src/console-runners/index.ts",
     "start:local-db": "docker compose up -d",

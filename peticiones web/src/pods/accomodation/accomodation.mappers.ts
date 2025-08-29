@@ -20,7 +20,8 @@ export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation):
   reviews: mapReviewsFromModelToApi(accomodation.reviews)
 });
 
-export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodation): model.Accomodation => ({
+export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodation): model.Accomodation => (
+  {
   _id: new ObjectId(accomodation.id),
   name: accomodation.name,
   images: accomodation.images,
@@ -29,7 +30,7 @@ export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodatio
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  reviews: mapReviewsFromApiToModel(accomodation.reviews)
+  reviews: mapReviewsFromApiToModel(accomodation.reviews) 
 });
 
 // Handles getTime() possible errors
@@ -42,9 +43,11 @@ export const mapReviewsFromModelToApi = (reviews: model.Review[]): apiModel.Revi
   const last5Reviews = reviews.sort((reviewA, reviewB) => getTime(reviewA.date) - getTime(reviewB.date)).slice(0, 5);
   return last5Reviews.map(mapReviewFromModelToApi);
 }
+
 export const mapReviewsFromApiToModel = (
   reviews: apiModel.Review[]
 ): model.Review[] => reviews.map(mapReviewFromApiToModel);
+
 
 export const mapReviewFromModelToApi = (review: model.Review): apiModel.Review => ({
   _id: review._id.toString(),
@@ -57,9 +60,9 @@ export const mapReviewFromModelToApi = (review: model.Review): apiModel.Review =
 
 export const mapReviewFromApiToModel = (review: apiModel.Review): model.Review => ({
   _id: Number(review._id),
-  date: new Date(review.date),
+  date: review.date,
   listing_id: Number(review.listing_id),
   reviewer_id: Number(review.reviewer_id),
   reviewer_name: review.reviewer_name,
-  comments: review.comments,
+  comments: review.comments
 })

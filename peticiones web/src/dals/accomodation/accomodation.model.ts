@@ -1,10 +1,10 @@
 import { ObjectId } from "mongodb";
 
 export type Review = {
-  _id: Number;
+  _id: number;
   date: Date;
-  listing_id: Number;
-  reviewer_id: Number;
+  listing_id: number;
+  reviewer_id: number;
   reviewer_name: string;
   comments: string;
 }
