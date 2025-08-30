@@ -5,7 +5,6 @@ import {
   mapAccomodationFromModelToApi,
   mapAccomodationFromApiToModel,
 } from "./accomodation.mappers.js";
-import { ObjectId } from "mongodb";
 export const accomodationApi = Router();
 
 accomodationApi
@@ -36,8 +35,8 @@ accomodationApi
     try {
       const { id } = req.params;
       if (await accomodationRepository.getAccomodation(id)) {
-        const reviews = (await accomodationRepository.getAccomodation(id)).reviews;
-        console.log(reviews);
+        // const reviews = (await accomodationRepository.getAccomodation(id)).reviews;
+        // console.log(reviews);
         const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
         const lastId = accomodation.reviews.sort((reviewA, reviewB) => Number(reviewA._id) - Number(reviewB._id)).slice(0)[0]._id;
         const newReview: Review = { _id: lastId + 1, date: new Date(), ...req.body[1] };
@@ -50,7 +49,7 @@ accomodationApi
       next(error);
     }
   })
-  .delete("/:id", async (req, res, next) => {
+  .delete("/:id", async(req, res, next) => {
     try {
       const { id } = req.params;
       const isDeleted = await accomodationRepository.deleteAccomodation(id);

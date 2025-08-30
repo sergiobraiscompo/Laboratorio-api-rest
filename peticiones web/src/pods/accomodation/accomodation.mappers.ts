@@ -20,8 +20,7 @@ export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation):
   reviews: mapReviewsFromModelToApi(accomodation.reviews)
 });
 
-export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodation): model.Accomodation => (
-  {
+export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodation): model.Accomodation => ({
   _id: new ObjectId(accomodation.id),
   name: accomodation.name,
   images: accomodation.images,
@@ -40,7 +39,8 @@ const getTime = (date?: Date) => {
 
 // Review Mappers
 export const mapReviewsFromModelToApi = (reviews: model.Review[]): apiModel.Review[] => {
-  const last5Reviews = reviews.sort((reviewA, reviewB) => getTime(reviewA.date) - getTime(reviewB.date)).slice(0, 5);
+  const last5Reviews = reviews.sort((reviewA, reviewB) => getTime(reviewB.date) - getTime(reviewA.date)).slice(0, 5);
+  console.log(last5Reviews)
   return last5Reviews.map(mapReviewFromModelToApi);
 }
 
