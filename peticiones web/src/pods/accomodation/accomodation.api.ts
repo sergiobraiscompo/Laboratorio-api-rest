@@ -2,8 +2,7 @@ import { Router } from "express";
 import { accomodationRepository, Review } from "#dals/index.js";
 import {
   mapAccomodationListFromModelToApi,
-  mapAccomodationFromModelToApi,
-  mapAccomodationFromApiToModel,
+  mapAccomodationFromModelToApi
 } from "./accomodation.mappers.js";
 export const accomodationApi = Router();
 
@@ -34,12 +33,10 @@ accomodationApi
   .put("/:id", async (req, res, next) => {
     try {
       const { id } = req.params;
-      if (await accomodationRepository.getAccomodation(id)) {
-        // const reviews = (await accomodationRepository.getAccomodation(id)).reviews;
-        // console.log(reviews);
-        const accomodation = mapAccomodationFromApiToModel({ ...req.body, id });
+      const accomodation = await accomodationRepository.getAccomodation(id);
+      if (accomodation) {
         const lastId = accomodation.reviews.sort((reviewA, reviewB) => Number(reviewA._id) - Number(reviewB._id)).slice(0)[0]._id;
-        const newReview: Review = { _id: lastId + 1, date: new Date(), ...req.body[1] };
+        const newReview: Review = { _id: lastId + 1, date: new Date(), ...req.body };
         await accomodationRepository.addReview(accomodation, newReview);
         res.sendStatus(204).send(accomodation);
       } else {

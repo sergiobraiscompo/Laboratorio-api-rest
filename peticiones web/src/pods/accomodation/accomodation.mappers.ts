@@ -40,7 +40,6 @@ const getTime = (date?: Date) => {
 // Review Mappers
 export const mapReviewsFromModelToApi = (reviews: model.Review[]): apiModel.Review[] => {
   const last5Reviews = reviews.sort((reviewA, reviewB) => getTime(reviewB.date) - getTime(reviewA.date)).slice(0, 5);
-  console.log(last5Reviews)
   return last5Reviews.map(mapReviewFromModelToApi);
 }
 
