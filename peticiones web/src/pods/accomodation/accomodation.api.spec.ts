@@ -4,23 +4,52 @@ import { createRestApiServer, dbServer } from '#core/servers/index.js';
 import { ENV } from '#core/constants/index.js';
 import { getAccomodationContext } from '#dals/accomodation/accomodation.context.js';
 import { accomodationApi } from './accomodation.api.js';
-import {Accomodation  } from './accomodation.api-model.js';
+import { Accomodation } from './accomodation.api-model.js';
+import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { mapReviewsFromApiToModel } from './accomodation.mappers.js';
 
 const app = createRestApiServer();
 app.use(accomodationApi);
 
 describe('pods/accomodation/accomodation.api specs', () => {
-      const app = createRestApiServer();
-      app.use(accomodationApi);
+  beforeAll(async () => {
+    await dbServer.connect(ENV.MONGODB_URL);
+  });
+
+  afterAll(async () => {
+    await dbServer.disconnect();
+  });
+
   describe('get accomodation list', () => {
-  it('should return the whole accomodationList with values when it request "/" endpoint without query params', async () => {
-    // Arrange
-    const route = '/';
-    // Act
-    const response = await supertest(app).get(route);
-    // Assert
-    expect(response.statusCode).toEqual(200);
-    expect(response.body).toHaveLength(7);
+    const app = createRestApiServer();
+    app.use(accomodationApi);
+
+    it('should return the whole accomodation list with values when it request "/" endpoint without query params', async () => {
+      // Arrange
+      const route = '/';
+
+      // Act
+      const response = await supertest(app).get(route);
+
+      // Assert
+      expect(response.statusCode).toEqual(200);
+    });
+  });
+  describe('get paginated accomodation list', () => {
+    const app = createRestApiServer();
+    app.use(accomodationApi);
+
+    it('should return the accomodation list paginated as indicated', async () => {
+      // Arrange
+      const route = '/';
+      const params = '?page=1&pageSize=5'
+
+      // Act
+      const response = await supertest(app).get(route);
+      console.log("response", response.body)
+      // Assert
+      expect(response.statusCode).toEqual(200);
+      expect(response.body).toHaveLength(5);
     });
   });
 });

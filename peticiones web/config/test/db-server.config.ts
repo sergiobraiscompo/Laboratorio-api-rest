@@ -3,7 +3,7 @@ import { MongoMemoryServer } from 'mongodb-memory-server';
 export async function setup() {
   const dbServer = await MongoMemoryServer.create({
     instance: {
-      dbName: 'test-book-store',
+      dbName: 'airbnb-db',
     },
   });
 

@@ -7,7 +7,6 @@ export type Review = {
   comments: string;
 }
 
-
 export interface Accomodation {
   id: string;
   name: string;

@@ -1,4 +1,4 @@
-import express, { application } from 'express';
+import express, {application} from 'express';
 import path from 'path';
 import url from 'url';
 import {
@@ -15,10 +15,10 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const staticFilesPath = path.resolve(__dirname, ENV.STATIC_FILES_PATH);
 app.use('/', express.static(staticFilesPath));
 
-app.use(
-  '/',
-  express.static(path.resolve(import.meta.dirname, ENV.STATIC_FILES_PATH))
-);
+// app.use(
+//   '/',
+//   express.static(path.resolve(import.meta.dirname, ENV.STATIC_FILES_PATH))
+// );
 
 app.use(logRequestMiddleware);
 
