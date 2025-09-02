@@ -5,7 +5,7 @@ import { ENV } from '#core/constants/index.js';
 import { getAccomodationContext } from '#dals/accomodation/accomodation.context.js';
 import { accomodationApi } from './accomodation.api.js';
 import { Accomodation } from './accomodation.api-model.js';
-import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
 import { mapReviewsFromApiToModel } from './accomodation.mappers.js';
 
 const app = createRestApiServer();
@@ -42,11 +42,10 @@ describe('pods/accomodation/accomodation.api specs', () => {
     it('should return the accomodation list paginated as indicated', async () => {
       // Arrange
       const route = '/';
-      const params = '?page=1&pageSize=5'
 
       // Act
       const response = await supertest(app).get(route);
-      console.log("response", response.body)
+      
       // Assert
       expect(response.statusCode).toEqual(200);
       expect(response.body).toHaveLength(5);
