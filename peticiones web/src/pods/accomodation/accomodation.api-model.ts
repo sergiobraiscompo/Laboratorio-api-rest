@@ -1,8 +1,8 @@
 export type Review = {
-  _id: string;
+  _id: number;
   date: Date
-  listing_id: string;
-  reviewer_id: string;
+  listing_id: number;
+  reviewer_id: number;
   reviewer_name: string;
   comments: string;
 }
@@ -10,9 +10,9 @@ export type Review = {
 export interface Accomodation {
   id: string;
   name: string;
-  images: string;
+  images: object;
   description: string;
-  address: string;
+  address: object;
   bedrooms: number;
   beds: number;
   bathrooms: number;

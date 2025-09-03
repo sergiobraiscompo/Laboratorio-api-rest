@@ -12,9 +12,9 @@ export type Review = {
 export interface Accomodation {
   _id: ObjectId;
   name: string;
-  images: string;
+  images: object;
   description: string;
-  address: string;
+  address: object;
   bedrooms: number;
   beds: number;
   bathrooms: number;
