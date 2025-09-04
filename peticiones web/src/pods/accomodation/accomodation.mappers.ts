@@ -49,10 +49,10 @@ export const mapReviewsFromApiToModel = (
 
 
 export const mapReviewFromModelToApi = (review: model.Review): apiModel.Review => ({
-  _id: review._id.toString(),
+  _id: review._id,
   date: review.date,
-  listing_id: String(review.listing_id),
-  reviewer_id: String(review.reviewer_id),
+  listing_id: review.listing_id,
+  reviewer_id: review.reviewer_id,
   reviewer_name: review.reviewer_name,
   comments: review.comments
 })

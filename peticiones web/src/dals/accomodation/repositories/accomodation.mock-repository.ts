@@ -5,17 +5,6 @@ import { ObjectId } from "mongodb";
 import { getAccomodationContext } from "../accomodation.context.js";
 import { mapAccomodationFromApiToModel } from "#pods/accomodation/accomodation.mappers.js";
 
-const insertAccomodation = (accomodation: Accomodation) => {
-  const _id = (db.accomodations.length + 1).toString();
-  const newAccomodation: Accomodation = {
-    ...accomodation,
-    _id,
-  };
-
-  db.accomodations = [...db.accomodations, newAccomodation];
-  return newAccomodation;
-};
-
 const updateAccomodation = (accomodation: Accomodation) => {
   db.accomodations = db.accomodations.map((a) => (a._id === accomodation._id ? { ...a, ...accomodation } : a));
   return accomodation;

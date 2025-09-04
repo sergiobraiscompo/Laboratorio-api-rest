@@ -38,7 +38,7 @@ accomodationApi
         const lastId = accomodation.reviews.sort((reviewA, reviewB) => Number(reviewA._id) - Number(reviewB._id)).slice(0)[0]._id;
         const newReview: Review = { _id: lastId + 1, date: new Date(), ...req.body };
         await accomodationRepository.addReview(accomodation, newReview);
-        res.sendStatus(204).send(accomodation);
+        res.sendStatus(201).send(accomodation);
       } else {
         res.sendStatus(404);
       }

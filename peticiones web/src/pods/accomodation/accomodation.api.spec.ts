@@ -280,7 +280,7 @@ describe('pods/accomodation/accomodation.api specs', () => {
   describe('inserts a review on the specified accomdation', () => {
     it('should return 201 when review is inserted', async () => {
       // Arrange
-      const route = '/65097600a74000a4a4a22686';
+      const route = '/65097600a74000a4a4a22687';
       const newReview = {
         "listing_id": "10006546",
         "reviewer_id": "000000000",
@@ -299,13 +299,15 @@ describe('pods/accomodation/accomodation.api specs', () => {
       // Assert
       expect(response.statusCode).toEqual(201);
       expect(response.body.id).toEqual(expect.any(String));
-      expect(response.newReview).toEqual(newReview.title);
-      expect(response.body.author).toEqual(newBook.author);
-      expect(response.body.releaseDate).toEqual(newBook.releaseDate);
+      expect(response.body._id).toBe(Number);
+      expect(response.body.date).toBe(Date);
+      expect(response.body.listing_id).toEqual(newReview.listing_id);
+      expect(response.body.reviewer_id).toEqual(newReview.reviewer_id);
+      expect(response.body.reviewer_name).toEqual(newReview.reviewer_name);
+      expect(response.body.comments).toEqual(newReview.comments);
     });
   });
 });
-
 
 // describe('pods/accomodation/accomodation.api specs', () => {
 // beforeAll(async () => {
@@ -366,7 +368,7 @@ describe('pods/accomodation/accomodation.api specs', () => {
 // +     app.use(bookApi);
 
 // +     const route = '/';
-// +     const newBook: Book = {
+// +     const newReview: Book = {
 // +       id: undefined,
 // +       title: 'book-2',
 // +       author: 'author-2',
@@ -374,14 +376,14 @@ describe('pods/accomodation/accomodation.api specs', () => {
 // +     };
 
 // +     // Act
-// +     const response = await supertest(app).post(route).send(newBook);
+// +     const response = await supertest(app).post(route).send(newReview);
 
 // +     // Assert
 // +     expect(response.statusCode).toEqual(201);
 // +     expect(response.body.id).toEqual(expect.any(String));
-// +     expect(response.body.title).toEqual(newBook.title);
-// +     expect(response.body.author).toEqual(newBook.author);
-// +     expect(response.body.releaseDate).toEqual(newBook.releaseDate);
+// +     expect(response.body.title).toEqual(newReview.title);
+// +     expect(response.body.author).toEqual(newReview.author);
+// +     expect(response.body.releaseDate).toEqual(newReview.releaseDate);
 // +   });
 // + });
 
