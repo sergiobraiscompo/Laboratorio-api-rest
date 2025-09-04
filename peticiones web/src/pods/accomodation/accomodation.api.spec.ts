@@ -4,10 +4,9 @@ import { createRestApiServer, dbServer } from '#core/servers/index.js';
 import { ENV } from '#core/constants/index.js';
 import { getAccomodationContext } from '#dals/accomodation/accomodation.context.js';
 import { accomodationApi } from './accomodation.api.js';
-import { Review } from './accomodation.api-model.js';
 import { describe, it, expect, beforeAll, afterAll, vi, beforeEach, afterEach } from 'vitest';
-import { mapReviewsFromApiToModel } from './accomodation.mappers.js';
 import { Accomodation } from '#dals/index.js';
+import { request } from 'express';
 
 const app = createRestApiServer();
 app.use(accomodationApi);
@@ -261,6 +260,7 @@ describe('pods/accomodation/accomodation.api specs', () => {
   afterAll(async () => {
     await dbServer.disconnect();
   });
+
   // get tests
   describe('get accomodation list', () => {
     it('should return the whole accomodation list with values when it request "/" endpoint without query params', async () => {
@@ -276,6 +276,51 @@ describe('pods/accomodation/accomodation.api specs', () => {
     });
   });
 
+  describe('get accomodation', () => {
+    it('should return an accomodation when we specify its id', async () => {
+      // Arrange
+      const route = '/65097600a74000a4a4a22687';
+      const expectedResult = {
+        id: "65097600a74000a4a4a22687",
+        name: "Horto flat with small garden",
+        images: {
+          "thumbnail_url": "",
+          "medium_url": "",
+          "picture_url": "https://a0.muscache.com/im/pictures/5b408b9e-45da-4808-be65-4edc1f29c453.jpg?aki_policy=large",
+          "xl_picture_url": ""
+        },
+        description: "One bedroom + sofa-bed in quiet and bucolic neighbourhood right next to the Botanical Garden. Small garden, outside shower, well equipped kitchen and bathroom with shower and tub. Easy for transport with many restaurants and basic facilities in the area. Lovely one bedroom + sofa-bed in the living room, perfect for two but fits up to four comfortably.  There´s a small outside garden with a shower There´s a well equipped open kitchen with both 110V / 220V wall plugs and one bathroom with shower, tub and even a sauna machine! All newly refurbished! I´ll be happy to help you with any doubts, tips or any other information needed during your stay. This charming ground floor flat is located in Horto, a quiet and bucolic neighborhood just next to the Botanical Garden, where most of the descendants of it´s first gardeners still live. You´ll be 30 minutes walk from waterfalls in the rainforest with easy hiking trails! There are nice bars and restaurants as well as basic facilities - pharmacy, b",
+        address: {
+          "street": "Rio de Janeiro, Rio de Janeiro, Brazil",
+          "suburb": "Jardim Botânico",
+          "government_area": "Jardim Botânico",
+          "market": "Rio De Janeiro",
+          "country": "Brazil",
+          "country_code": "BR",
+          "location": {
+            "type": "Point",
+            "coordinates": [
+              -43.23074991429229,
+              -22.966253551739655
+            ],
+            "is_location_exact": true
+          }
+        },
+        bedrooms: 1,
+        beds: 2,
+        bathrooms: 1,
+        reviews: []
+      }
+
+      // Act
+      const response = await supertest(app).get(route);
+
+      // Assert
+      expect(response.statusCode).toEqual(200);
+      expect(response.body).toStrictEqual(expectedResult);
+    });
+  });
+
   // put tests
   describe('inserts a review on the specified accomdation', () => {
     it('should return 201 when review is inserted', async () => {
@@ -287,14 +332,11 @@ describe('pods/accomodation/accomodation.api specs', () => {
         "reviewer_name": "notocold",
         "comments": "Lorem ipsum dolor amet."
       };
-
-      const app = createRestApiServer();
-      app.use((req, res, next) => {
-        req.body = newReview
-        next();
-      });
+      request.body = newReview
+      
       // Act
       const response = await supertest(app).put(route).send(newReview);
+      console.log(request.body);
 
       // Assert
       expect(response.statusCode).toEqual(201);
