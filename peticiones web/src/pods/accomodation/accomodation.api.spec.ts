@@ -332,11 +332,9 @@ describe('pods/accomodation/accomodation.api specs', () => {
         "reviewer_name": "notocold",
         "comments": "Lorem ipsum dolor amet."
       };
-      request.body = newReview
-      
+
       // Act
       const response = await supertest(app).put(route).send(newReview);
-      console.log(request.body);
 
       // Assert
       expect(response.statusCode).toEqual(201);
