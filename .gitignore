@@ -2,5 +2,5 @@ node_modules
 dist
 .env
 mongo-data
-airbnb
-.vs
+./airbnb
+./.vs
