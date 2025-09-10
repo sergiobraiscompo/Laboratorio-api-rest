@@ -8,7 +8,7 @@ export type Review = {
 }
 
 export interface Accomodation {
-  id: string;
+  _id: string;
   name: string;
   images: object;
   description: string;

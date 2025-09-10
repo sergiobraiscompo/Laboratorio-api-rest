@@ -7,9 +7,13 @@ export const mapAccomodationListFromModelToApi = (
   accomodationList: model.Accomodation[]
 ): apiModel.Accomodation[] => accomodationList.map(mapAccomodationFromModelToApi);
 
+export const mapAccomodationListFromApiToModel = (
+  accomodationList: apiModel.Accomodation[]
+): model.Accomodation[] => accomodationList.map(mapAccomodationFromApiToModel);
+
 // Accomodation mappers
 export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation): apiModel.Accomodation => ({
-  id: accomodation._id.toHexString(),
+  _id: accomodation._id.toHexString(),
   name: accomodation.name,
   images: accomodation.images,
   description: accomodation.description,
@@ -21,7 +25,7 @@ export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation):
 });
 
 export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodation): model.Accomodation => ({
-  _id: new ObjectId(accomodation.id),
+  _id: new ObjectId(accomodation._id),
   name: accomodation.name,
   images: accomodation.images,
   description: accomodation.description,
