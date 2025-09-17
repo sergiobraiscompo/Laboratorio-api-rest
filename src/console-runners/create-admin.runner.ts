@@ -26,6 +26,5 @@ export const run = async () => {
     passwordAnswers = await prompts(passwordQuestions);
   }
 
-  // TODO: Insert into DB and disconnect it
   console.log(`User ${user} created!`);
 };
