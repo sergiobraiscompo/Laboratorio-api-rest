@@ -1144,4 +1144,3 @@ describe('pods/accomodation/accomodation.mappers spec', () => {
     expect(result).toEqual(expectedResult);
   });
 });
->>>>>>> 977c58c34edb8b98d528189b35b8af1f8ff4dd9e

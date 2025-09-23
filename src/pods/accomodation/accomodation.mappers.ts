@@ -69,4 +69,3 @@ export const mapReviewFromApiToModel = (review: apiModel.Review): model.Review =
   reviewer_name: review.reviewer_name,
   comments: review.comments
 })
->>>>>>> 977c58c34edb8b98d528189b35b8af1f8ff4dd9e
