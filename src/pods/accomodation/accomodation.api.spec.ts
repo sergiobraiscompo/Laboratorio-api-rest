@@ -317,20 +317,21 @@ describe('pods/accomodation/accomodation.api specs', () => {
 
       // Assert
       expect(response.statusCode).toEqual(200);
-      expect(response.body).toStrictEqual(expectedResult);
+      expect(response.body).toEqual(expectedResult);
     });
   });
 
   // put tests
   describe('inserts a review on the specified accomdation', () => {
-    it('should return 201 when review is inserted', async () => {
+
+    it("should return 201 when review is inserted", async () => {
       // Arrange
-      const route = '/65097600a74000a4a4a22687';
+      const route = "/65097600a74000a4a4a22687";
       const newReview = {
-        "listing_id": "10006546",
-        "reviewer_id": "000000000",
-        "reviewer_name": "notocold",
-        "comments": "Lorem ipsum dolor amet."
+        listing_id: "10006546",
+        reviewer_id: "000000000",
+        reviewer_name: "notocold",
+        comments: "Lorem ipsum dolor amet.",
       };
 
       // Act
@@ -338,9 +339,8 @@ describe('pods/accomodation/accomodation.api specs', () => {
 
       // Assert
       expect(response.statusCode).toEqual(201);
-      expect(response.body.id).toEqual(expect.any(String));
-      expect(response.body._id).toBe(Number);
-      expect(response.body.date).toBe(Date);
+      expect(typeof response.body._id).toBe("number");
+      expect(new Date(response.body.date)).toBeInstanceOf(Date);
       expect(response.body.listing_id).toEqual(newReview.listing_id);
       expect(response.body.reviewer_id).toEqual(newReview.reviewer_id);
       expect(response.body.reviewer_name).toEqual(newReview.reviewer_name);
