@@ -14,15 +14,6 @@ export const mongoDBRepository: AccomodationRepository = {
       _id: new ObjectId(id),
     });
   },
-  saveAccomodation: async (accomodation: Accomodation) => {
-    return await getAccomodationContext().findOneAndUpdate(
-      {
-        _id: accomodation._id,
-      },
-      { $set: accomodation },
-      { upsert: true, returnDocument: 'after' }
-    );
-  },
   addReview: async (accomodation: Accomodation, newReview: Review) => {
     return await getAccomodationContext()
       .findOneAndUpdate(
@@ -32,11 +23,5 @@ export const mongoDBRepository: AccomodationRepository = {
         { $push: { reviews: newReview } },
         { upsert: true, returnDocument: 'after' }
       )
-  },
-  deleteAccomodation: async (id: string): Promise<Boolean> => {
-    const { deletedCount } = await getAccomodationContext().deleteOne({
-      _id: new ObjectId(id),
-    });
-    return deletedCount === 1;
-  },
+  }
 };

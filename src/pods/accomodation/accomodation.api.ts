@@ -53,12 +53,3 @@ accomodationApi
        next(error);
      }
    })
-  .delete("/:id", async(req, res, next) => {
-    try {
-      const { id } = req.params;
-      const isDeleted = await accomodationRepository.deleteAccomodation(id);
-      res.sendStatus(isDeleted ? 204 : 404);
-    } catch (error) {
-      next(error);
-    }
-  });
