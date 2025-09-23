@@ -8,7 +8,7 @@ while (!exit) {
     name: "consoleRunner",
     type: "select",
     message: "Which console-runner do you want to run?",
-    choices: ['seed-data', "create-admin", "exit"].map((option) => ({
+    choices: ['seed-data', "exit"].map((option) => ({
       title: option,
       value: option,
     })),
