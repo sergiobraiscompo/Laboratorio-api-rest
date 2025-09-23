@@ -7,6 +7,10 @@ export const mapAccomodationListFromModelToApi = (
   accomodationList: model.Accomodation[]
 ): apiModel.Accomodation[] => accomodationList.map(mapAccomodationFromModelToApi);
 
+export const mapAccomodationListFromApiToModel = (
+  accomodationList: apiModel.Accomodation[]
+): model.Accomodation[] => accomodationList.map(mapAccomodationFromApiToModel);
+
 // Accomodation mappers
 export const mapAccomodationFromModelToApi = (accomodation: model.Accomodation): apiModel.Accomodation => ({
   _id: accomodation._id.toHexString(),
@@ -29,7 +33,7 @@ export const mapAccomodationFromApiToModel = (accomodation: apiModel.Accomodatio
   bedrooms: accomodation.bedrooms,
   beds: accomodation.beds,
   bathrooms: accomodation.bathrooms,
-  reviews: mapReviewsFromApiToModel(accomodation.reviews) 
+  reviews: mapReviewsFromApiToModel(accomodation.reviews)
 });
 
 // Handles getTime() possible errors
@@ -65,3 +69,4 @@ export const mapReviewFromApiToModel = (review: apiModel.Review): model.Review =
   reviewer_name: review.reviewer_name,
   comments: review.comments
 })
+>>>>>>> 977c58c34edb8b98d528189b35b8af1f8ff4dd9e

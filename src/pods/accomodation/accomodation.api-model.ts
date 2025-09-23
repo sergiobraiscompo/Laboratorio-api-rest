@@ -18,3 +18,4 @@ export interface Accomodation {
   bathrooms: number;
   reviews: Review[];
 }
+
