@@ -1,0 +1,12 @@
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\bin\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.deps.json
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\bin\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.dll
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\bin\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.pdb
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.AssemblyInfoInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.AssemblyInfo.cs
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.sourcelink.json
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.dll
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\refint\LaboratorioModulo3-DotNet.Domain.Entities.dll
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.Entities.pdb
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain.Entities\obj\Debug\net8.0\ref\LaboratorioModulo3-DotNet.Domain.Entities.dll
