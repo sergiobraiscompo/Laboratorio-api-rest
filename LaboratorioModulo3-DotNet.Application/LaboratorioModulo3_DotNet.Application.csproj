@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>LaboratorioModulo3_DotNet.Application</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="FluentValidation" Version="12.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LaboratorioModulo3-DotNet.DataAccess\LaboratorioModulo3_DotNet.DataAccess.csproj" />
+    <ProjectReference Include="..\LaboratorioModulo3-DotNet.Domain\LaboratorioModulo3_DotNet.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

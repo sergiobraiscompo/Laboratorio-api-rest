@@ -1,0 +1,318 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Application\\LaboratorioModulo3_DotNet.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Application\\LaboratorioModulo3_DotNet.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Application\\LaboratorioModulo3_DotNet.Application.csproj",
+        "projectName": "LaboratorioModulo3_DotNet.Application",
+        "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Application\\LaboratorioModulo3_DotNet.Application.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.DataAccess\\LaboratorioModulo3_DotNet.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.DataAccess\\LaboratorioModulo3_DotNet.DataAccess.csproj"
+              },
+              "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain\\LaboratorioModulo3_DotNet.Domain.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain\\LaboratorioModulo3_DotNet.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.DataAccess\\LaboratorioModulo3_DotNet.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.DataAccess\\LaboratorioModulo3_DotNet.DataAccess.csproj",
+        "projectName": "LaboratorioModulo3_DotNet.DataAccess",
+        "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.DataAccess\\LaboratorioModulo3_DotNet.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain.Entities\\LaboratorioModulo3_DotNet.Domain.Entities.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain.Entities\\LaboratorioModulo3_DotNet.Domain.Entities.csproj"
+              },
+              "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain\\LaboratorioModulo3_DotNet.Domain.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain\\LaboratorioModulo3_DotNet.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[15.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain.Entities\\LaboratorioModulo3_DotNet.Domain.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain.Entities\\LaboratorioModulo3_DotNet.Domain.Entities.csproj",
+        "projectName": "LaboratorioModulo3_DotNet.Domain.Entities",
+        "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain.Entities\\LaboratorioModulo3_DotNet.Domain.Entities.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain\\LaboratorioModulo3_DotNet.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain\\LaboratorioModulo3_DotNet.Domain.csproj",
+        "projectName": "LaboratorioModulo3_DotNet.Domain",
+        "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain\\LaboratorioModulo3_DotNet.Domain.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain.Entities\\LaboratorioModulo3_DotNet.Domain.Entities.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Downloads\\Laboratorio_Modulo_3_DotNet-master\\LaboratorioModulo3-DotNet.Domain.Entities\\LaboratorioModulo3_DotNet.Domain.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

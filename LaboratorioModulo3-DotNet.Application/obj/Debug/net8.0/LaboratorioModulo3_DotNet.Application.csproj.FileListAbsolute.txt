@@ -1,0 +1,11 @@
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.AssemblyInfoInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.AssemblyInfo.cs
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.sourcelink.json
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.csproj.AssemblyReference.cache
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.csproj.AssemblyReference.cache
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.AssemblyInfoInputs.cache
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.AssemblyInfo.cs
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.Application\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Application.csproj.CoreCompileInputs.cache
