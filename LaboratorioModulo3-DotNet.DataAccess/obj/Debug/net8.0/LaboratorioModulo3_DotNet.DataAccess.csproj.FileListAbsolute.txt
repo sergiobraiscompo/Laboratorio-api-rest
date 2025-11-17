@@ -1,0 +1,11 @@
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.AssemblyInfoInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.AssemblyInfo.cs
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.sourcelink.json
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.AssemblyInfo.cs
+C:\Users\Sergio\Downloads\Laboratorio_Modulo_3_DotNet-master\LaboratorioModulo3-DotNet.DataAccess\obj\Debug\net8.0\LaboratorioModulo3_DotNet.DataAccess.csproj.CoreCompileInputs.cache
