@@ -1,0 +1,5 @@
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.AssemblyInfoInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.AssemblyInfo.cs
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\LaboratorioModulo3-DotNet.Domain\obj\Debug\net8.0\LaboratorioModulo3-DotNet.Domain.sourcelink.json

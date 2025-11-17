@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>LaboratorioModulo3_DotNet.Domain</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LaboratorioModulo3-DotNet.Domain.Entities\LaboratorioModulo3_DotNet.Domain.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
