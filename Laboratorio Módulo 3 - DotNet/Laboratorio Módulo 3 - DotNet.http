@@ -1,0 +1,6 @@
+@Laboratorio_Módulo_3___DotNet_HostAddress = http://localhost:5160
+
+GET {{Laboratorio_Módulo_3___DotNet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

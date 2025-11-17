@@ -1,0 +1,8 @@
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\Laboratorio Módulo 3 - DotNet\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Api.csproj.AssemblyReference.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\Laboratorio Módulo 3 - DotNet\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\Laboratorio Módulo 3 - DotNet\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\Laboratorio Módulo 3 - DotNet\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Api.AssemblyInfoInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\Laboratorio Módulo 3 - DotNet\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Api.AssemblyInfo.cs
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\Laboratorio Módulo 3 - DotNet\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Api.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\Laboratorio Módulo 3 - DotNet\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sergi\Documents\bootcamp lemoncode\Labs\Labos relacionales\Laboratorio Módulo 3 - DotNet\Laboratorio Módulo 3 - DotNet\obj\Debug\net8.0\LaboratorioModulo3_DotNet.Api.sourcelink.json
